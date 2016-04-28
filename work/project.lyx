@@ -25,6 +25,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -68,15 +69,202 @@
 
 \begin_body
 
-\begin_layout Part*
-prova modifica
+\begin_layout Title
+\begin_inset Graphics
+	filename C:/Users/Mirko/Dropbox/shared_se2/1336955473-824244321.jpg
+	scale 75
+	BoundingBox 0cm 0bp 460bp 313bp
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+SmartCityAdvisor
+\begin_inset Newline newline
+\end_inset
+
+Requirements Analysis and Specifications Document
+\end_layout
+
+\begin_layout Author
+Mirko Basilico, Federico Dazzan
 \end_layout
 
 \begin_layout Standard
-let's see if this shit it's working!
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Purpose
+\end_layout
+
+\begin_layout Standard
+This document represent the Requirement Analysis and Specification Document
+ (RASD).
+ The main goal of this document is to completely describe the system in
+ terms of functional and non-functional requirements, analyse the real need
+ of the customer to modelling the system, show the constraints and the limit
+ of the software and simulate the typical use cases that will occur after
+ the development.
+ This document is intended to all developer and programmer who have to implement
+ the requirements, to system analyst who want to integrate other system
+ with this one, and could be used as a contractual basis between the customer
+ and the developer.
+\end_layout
+
+\begin_layout Subsection
+Scope
+\end_layout
+
+\begin_layout Standard
+We will project and implement SmartCityAdvisor, which will be a software
+ system that, using a web/mobile app, will provide the following features
+ to the city of Milan and to its citizens:
+\end_layout
+
+\begin_layout Itemize
+If the level of CO2 is too high or in case of any special situation managed
+ by the control center (e.g., the arrival of some VIP, an accident, …), the
+ system limits the traffic that enters in the city center by diverting it
+ through paths that avoid the center.
+ This is done both by controlling the traffic lights and by alerting the
+ citizens through the app and through some large displays that are installed
+ at the main entrances of the city.
+\end_layout
+
+\begin_layout Itemize
+When a citizen signals through the app that he/she has to go to an emergency
+ room, provide suggestions on which hospital to choose based on: i) the
+ problem of the citizen and the specializations available in the hospitals,
+ ii) the status of queues in the various emergency rooms, iii) the location
+ of the citizen and iv) the situation of traffic.
+\end_layout
+
+\begin_layout Standard
+To provide this features, SmartCityAdvisor will use informations that the
+ city of Milan receives from the Data Control Center of the city, that collects
+ data from some sensors that have been installed in the territory.
+ This sensors acquire data about:
+\end_layout
+
+\begin_layout Itemize
+level of CO2 in the air;
+\end_layout
+
+\begin_layout Itemize
+cars that enter in the city center;
+\end_layout
+
+\begin_layout Itemize
+availability of parking places in all areas in the city center.
+\end_layout
+
+\begin_layout Standard
+Besides the sensors, the city has also installed proper actuators that control
+ the traffic lights at the main intersections in the city.
+ The actuators are controlled by the Traffic Control Center of the city,
+ which also deals with the management of the displays installed at the main
+ entrances of the city.
+\end_layout
+
+\begin_layout Standard
+Moreover, the city has established agreements with the main hospitals in
+ the territory to know in real-time the length of the queues in their emergency
+ rooms, and with ATM (the public transport company) to know in real-time
+ the position and current schedule of all public transports in the city.
+\end_layout
+
+\begin_layout Subsection
+Actors
+\end_layout
+
+\begin_layout Standard
+The actors of our system are:
+\end_layout
+
+\begin_layout Description
+Citizen: 
+\end_layout
+
+\begin_layout Description
+Registered
+\begin_inset space ~
+\end_inset
+
+citizen: 
+\end_layout
+
+\begin_layout Description
+Data
+\begin_inset space ~
+\end_inset
+
+Control
+\begin_inset space ~
+\end_inset
+
+Center
+\begin_inset space ~
+\end_inset
+
+(DCC): 
+\end_layout
+
+\begin_layout Description
+Traffic
+\begin_inset space ~
+\end_inset
+
+Control
+\begin_inset space ~
+\end_inset
+
+Center
+\begin_inset space ~
+\end_inset
+
+(TCC): 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
