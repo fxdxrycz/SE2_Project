@@ -116,6 +116,22 @@ thispagestyle{empty}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Introduction
 \end_layout
@@ -148,22 +164,39 @@ We will project and implement SmartCityAdvisor, which will be a software
  to the city of Milan and to its citizens:
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 If the level of CO2 is too high or in case of any special situation managed
- by the control center (e.g., the arrival of some VIP, an accident, …), the
- system limits the traffic that enters in the city center by diverting it
- through paths that avoid the center.
+ by the government of the city (e.g., the arrival of some VIP, an accident,
+ …), the system limits the traffic that enters in the city center by diverting
+ it through paths that avoid the center.
  This is done both by controlling the traffic lights and by alerting the
  citizens through the app and through some large displays that are installed
  at the main entrances of the city.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 When a citizen signals through the app that he/she has to go to an emergency
  room, provide suggestions on which hospital to choose based on: i) the
  problem of the citizen and the specializations available in the hospitals,
  ii) the status of queues in the various emergency rooms, iii) the location
  of the citizen and iv) the situation of traffic.
+\end_layout
+
+\begin_layout Enumerate
+When a citizen want to go to the city center by car, he can signals through
+ the app the addres of the place he want to go, and the system will return
+ the address of the closest parking with corresponding availability.
+\end_layout
+
+\begin_layout Enumerate
+When a citizen want to reach a place in Milan using the public transports,
+ he can signal through the app the starting and the arrival addresses and
+ the kind of public transport he want to use (underground, tram or bus).
+ After the citizen will have put this data into the app, the system will
+ show: i) the position of the closest station where to get the selected
+ public tansport, ii) the hour when the public transport will arrive at
+ the starting station, iii) the estimated time it will take to arrive to
+ destination.
 \end_layout
 
 \begin_layout Standard
@@ -188,6 +221,9 @@ availability of parking places in all areas in the city center.
 \begin_layout Standard
 Besides the sensors, the city has also installed proper actuators that control
  the traffic lights at the main intersections in the city.
+ The actuators are controlled by the Traffic Control Center of the city,
+ which also deals with the management of the displays installed at the main
+ entrances of the city.
 \end_layout
 
 \begin_layout Standard
@@ -195,6 +231,8 @@ Moreover, the city has established agreements with the main hospitals in
  the territory to know in real-time the length of the queues in their emergency
  rooms, and with ATM (the public transport company) to know in real-time
  the position and current schedule of all public transports in the city.
+ Both of them send their data to the Data Control Center of the city, which
+ will provide the data to our system.
 \end_layout
 
 \begin_layout Subsection
@@ -205,20 +243,153 @@ Actors
 The actors of our system are:
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{arabic}
+\begin_layout Description
+Citizen: a citizen of Milan who hasn’t signed up into the app yet.
+ This kind of user can only see the app's login page and access to the registrat
+ion form.
 \end_layout
 
+\begin_layout Description
+Registered
+\begin_inset space ~
 \end_inset
 
+citizen: a citizen of Milan who has signed up into the app.
+ This kind of user can also use all the services provided by our system
+ through the app.
+\end_layout
 
+\begin_layout Description
+Data
+\begin_inset space ~
+\end_inset
+
+Control
+\begin_inset space ~
+\end_inset
+
+Center
+\begin_inset space ~
+\end_inset
+
+(DCC): an hardware/software system that collect some data usefull for the
+ city.
+ This will be the actor that provides the data to our system, as indicated
+ at the previous point of this document.
+\end_layout
+
+\begin_layout Description
+Traffic
+\begin_inset space ~
+\end_inset
+
+Control
+\begin_inset space ~
+\end_inset
+
+Center
+\begin_inset space ~
+\end_inset
+
+(TCC): an hardware/software system that, through proper actuators, controls
+ the traffic light at the main intersection in the city and the displays
+ that shows information about the situatuion of the traffic in the center.
+\end_layout
+
+\begin_layout Description
+Government
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+Milan: in case of any special situation in the center (e.g., the arrival of
+ some VIP, an accident, …), it will indicate to the system that the access
+ to the city center must be limited.
+\end_layout
+
+\begin_layout Subsection
+Goals
+\end_layout
+
+\begin_layout Subsection
+Definitions
+\end_layout
+
+\begin_layout Subsection
+Stakeholders
+\end_layout
+
+\begin_layout Standard
+Our principal stakeholder is the government of the city, the institution
+ that commissioned us to develop this software.
+ It expects to receive a working software that fulfills the requests, the
+ documentation about requirements analysis, design, development, testing,
+ project reporting and a final presentation.
+ The purpose of this stakeholder is to provide some features to its citizen
+ with the aim of improve their quality of life.
+\end_layout
+
+\begin_layout Standard
+Other secondary stakeholders are:
+\end_layout
+
+\begin_layout Itemize
+the citizens of the Milan;
+\end_layout
+
+\begin_layout Itemize
+the public transport company (ATM);
+\end_layout
+
+\begin_layout Itemize
+the main ospitals of Milan.
+\end_layout
+
+\begin_layout Subsection
+Reference Documents
+\end_layout
+
+\begin_layout Itemize
+New Project April 2016.pdf
+\end_layout
+
+\begin_layout Itemize
+IEEE Std 830­1998 IEEE Recommended Practice for Software Requirements Specificat
+ions.
+\end_layout
+
+\begin_layout Subsection
+Document overview
+\end_layout
+
+\begin_layout Standard
+This document is essentially structured in three parts: 
+\end_layout
+
+\begin_layout Itemize
+Section 1: Introduction, it gives a description of document and some basic
+ information about software.
+ 
+\end_layout
+
+\begin_layout Itemize
+Section 2: Overall Description, gives general information about the software
+ product with more focus about constraints and assumptions.
+ 
+\end_layout
+
+\begin_layout Itemize
+Section 3: Specific Requirements, this part list requirements, typical scenarios
+ and use cases.
+ To give an easy way to understand all functionality of this software, this
+ section is filled with UML diagrams.
+\end_layout
+
+\begin_layout Section
+Overall Description
 \end_layout
 
 \end_body

@@ -320,50 +320,45 @@ List of the goals of SmartCityAdvisor:
 \end_layout
 
 \begin_layout Itemize
-[G1] Citizen should be able to register to the service;
+Citizen should be able to register to the service;
 \end_layout
 
 \begin_layout Itemize
-[G2] Citizen should be able to login to the service;
+Citizen should be able to login to the service;
 \end_layout
 
 \begin_layout Itemize
-[G3] If the level of CO2 in the air is over a specif threshold, access to
- the center should not be allowed to cars;
+If the level of CO2 in the air is over a specif threshold, access to the
+ center should not be allowed to cars;
 \end_layout
 
 \begin_layout Itemize
-[G4] In case of any special situation in the center (e.g., the arrival of
- some VIP, an accident, …), and if the government of Milan think it is necessary
-, access to the center should not be allowed to cars;
+In case of any special situation in the center (e.g., the arrival of some
+ VIP, an accident, …), and if the government of Milan think it is necessary,
+ access to the center should not be allowed to cars;
 \end_layout
 
 \begin_layout Itemize
-[G5] If the access to the center is not allowed to cars, the citizen should
- be alerted of this (by app and by displays installed at he main entrances
+If the access to the center is not allowed to cars, the citizen should be
+ alerted of this (by app and by displays installed at he main entrances
  of the city);
 \end_layout
 
 \begin_layout Itemize
-[G6] A registered citizen with a specific healt problem, should receive
- suggestions on which hospital to go to receive assistance for his problem
- in the shorters possible time (considering the time to go to the ospital
- and the time to wait in queue;
+A registered citizen with a specific healt problem, should receive suggestions
+ on which hospital to go to receive assistance for his problem in the shorters
+ possible time (considering the time to go to the ospital and the time to
+ wait in queue;
 \end_layout
 
 \begin_layout Itemize
-[G7] A registered citizen that want to go to a specific address in the center
+A registered citizen that want to go to a specific address in the center
  by car, should receive information about the closest available parking
  and the corresponding availability;
 \end_layout
 
 \begin_layout Itemize
-[G8] A registered citizen that want to go to a specific address in Milan,
- using a specific public transport (underground, tram or bus), should receive
- information about the position of the closest station where to get the
- selected public tansport, the hour when the public transport will arrive
- at the starting station, the estimated time it will take to arrive to destinati
-on.
+
 \end_layout
 
 \begin_layout Subsection
