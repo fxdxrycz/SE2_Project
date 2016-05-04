@@ -144,14 +144,14 @@ Purpose
 This document represent the Requirement Analysis and Specification Document
  (RASD).
  The main goal of this document is to completely describe the system in
- terms of functional and non-functional requirements, analyse the real need
- of the customer to modelling the system, show the constraints and the limit
+ terms of functional and non-functional requirements, analyze the real need
+ of the customer to model the system, show the constraints and the limits
  of the software and simulate the typical use cases that will occur after
  the development.
- This document is intended to all developer and programmer who have to implement
- the requirements, to system analyst who want to integrate other system
- with this one, and could be used as a contractual basis between the customer
- and the developer.
+ This document is intended to all developers and programmers who have to
+ implement the requirements, to system analysts who want to integrate other
+ system with this one, and could be used as a contractual basis between
+ the customer and the developers.
 \end_layout
 
 \begin_layout Subsection
@@ -177,32 +177,32 @@ If the level of CO2 is too high or in case of any special situation managed
 \begin_layout Enumerate
 When a citizen signals through the app that he/she has to go to an emergency
  room, provide suggestions on which hospital to choose based on: i) the
- problem of the citizen and the specializations available in the hospitals,
+ condition of the citizen and the specializations available in the hospitals,
  ii) the status of queues in the various emergency rooms, iii) the location
  of the citizen and iv) the situation of traffic.
 \end_layout
 
 \begin_layout Enumerate
-When a citizen want to go to the city center by car, he can signals through
- the app the addres of the place he want to go, and the system will return
+When a citizen wants to go to the city center by car, he can signal through
+ the app the address of the place he wants to go, and the system will return
  the address of the closest available parking with corresponding availability.
 \end_layout
 
 \begin_layout Enumerate
-When a citizen want to reach a place in Milan using the public transports,
- he can signal through the app the starting and the arrival addresses and
- the kind of public transport he want to use (underground, tram or bus).
- After the citizen will have put this data into the app, the system will
- show: i) the position of the closest station where to get the selected
- public tansport, ii) the hour when the public transport will arrive at
- the starting station, iii) the estimated time it will take to arrive to
- destination.
+When a citizen wants to reach a place in Milan using the public transport
+ system, he can signal through the app the starting and the arrival address
+ and the kind of public transport he wants to use (underground, tram or
+ bus).
+ After the citizen has put this data into the app, the system will show:
+ i) the position of the closest station where to get the desired public
+ transport, ii) the time when the public transport will arrive at the starting
+ station, iii) the estimated time it will take to arrive to destination.
 \end_layout
 
 \begin_layout Standard
 To provide this features, SmartCityAdvisor will use informations that the
  city of Milan receives from the Data Control Center of the city, that collects
- data from some sensors that have been installed in the territory.
+ data from various sensors that have been installed in the territory.
  This sensors acquire data about:
 \end_layout
 
@@ -211,11 +211,11 @@ level of CO2 in the air;
 \end_layout
 
 \begin_layout Itemize
-cars that enter in the city center;
+number of cars that enter in the city center;
 \end_layout
 
 \begin_layout Itemize
-availability of parking places in all areas in the city center.
+availability of parking places in all areas of the city center.
 \end_layout
 
 \begin_layout Standard
@@ -272,7 +272,7 @@ Center
 \begin_inset space ~
 \end_inset
 
-(DCC): an hardware/software system that collect some data usefull for the
+(DCC): an hardware/software system that collects some data useful for the
  city.
  This will be the actor that provides the data to our system, as indicated
  at the previous point of this document.
@@ -293,8 +293,8 @@ Center
 
 (TCC): an hardware/software system that, through proper actuators, controls
  the traffic light at the main intersection in the city and the displays
- that shows information about the situatuion of the traffic in the center.
- It can be made by a manually operated control center or an automatic system.
+ that shows information about the situation of the traffic in the center.
+ It can be operated manually or by an automatic system.
 \end_layout
 
 \begin_layout Description
@@ -328,8 +328,8 @@ List of the goals of SmartCityAdvisor:
 \end_layout
 
 \begin_layout Itemize
-[G3] If the level of CO2 in the air is over a specif threshold, access to
- the center should not be allowed to cars;
+[G3] If the level of CO2 in the air is over a specific threshold, access
+ to the center should not be allowed to cars;
 \end_layout
 
 \begin_layout Itemize
@@ -345,9 +345,9 @@ List of the goals of SmartCityAdvisor:
 \end_layout
 
 \begin_layout Itemize
-[G6] A registered citizen with a specific healt problem, should receive
- suggestions on which hospital to go to receive assistance for his problem
- in the shorters possible time (considering the time to go to the ospital
+[G6] A registered citizen with a specific health condition, should receive
+ suggestions on which hospital to go to receive assistance for his condition
+ in the shortest possible time (considering the time to go to the hospital
  and the time to wait in queue;
 \end_layout
 
@@ -361,9 +361,9 @@ List of the goals of SmartCityAdvisor:
 [G8] A registered citizen that want to go to a specific address in Milan,
  using a specific public transport (underground, tram or bus), should receive
  information about the position of the closest station where to get the
- selected public tansport, the hour when the public transport will arrive
- at the starting station, the estimated time it will take to arrive to destinati
-on.
+ selected public transport, the time when the public transport will arrive
+ at the starting station, and the estimated time it will take to arrive
+ to destination.
 \end_layout
 
 \begin_layout Subsection
@@ -397,7 +397,7 @@ the public transport company (ATM);
 \end_layout
 
 \begin_layout Itemize
-the main ospitals of Milan.
+the main hospitals of Milan.
 \end_layout
 
 \begin_layout Subsection

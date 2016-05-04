@@ -185,7 +185,7 @@ When a citizen signals through the app that he/she has to go to an emergency
 \begin_layout Enumerate
 When a citizen want to go to the city center by car, he can signals through
  the app the addres of the place he want to go, and the system will return
- the address of the closest available parking with corresponding availability.
+ the address of the closest parking with corresponding availability.
 \end_layout
 
 \begin_layout Enumerate
@@ -294,7 +294,6 @@ Center
 (TCC): an hardware/software system that, through proper actuators, controls
  the traffic light at the main intersection in the city and the displays
  that shows information about the situatuion of the traffic in the center.
- It can be made by a manually operated control center or an automatic system.
 \end_layout
 
 \begin_layout Description
@@ -313,52 +312,6 @@ Milan: in case of any special situation in the center (e.g., the arrival of
 
 \begin_layout Subsection
 Goals
-\end_layout
-
-\begin_layout Standard
-List of the goals of SmartCityAdvisor:
-\end_layout
-
-\begin_layout Itemize
-Citizen should be able to register to the service;
-\end_layout
-
-\begin_layout Itemize
-Citizen should be able to login to the service;
-\end_layout
-
-\begin_layout Itemize
-If the level of CO2 in the air is over a specif threshold, access to the
- center should not be allowed to cars;
-\end_layout
-
-\begin_layout Itemize
-In case of any special situation in the center (e.g., the arrival of some
- VIP, an accident, …), and if the government of Milan think it is necessary,
- access to the center should not be allowed to cars;
-\end_layout
-
-\begin_layout Itemize
-If the access to the center is not allowed to cars, the citizen should be
- alerted of this (by app and by displays installed at he main entrances
- of the city);
-\end_layout
-
-\begin_layout Itemize
-A registered citizen with a specific healt problem, should receive suggestions
- on which hospital to go to receive assistance for his problem in the shorters
- possible time (considering the time to go to the ospital and the time to
- wait in queue;
-\end_layout
-
-\begin_layout Itemize
-A registered citizen that want to go to a specific address in the center
- by car, should receive information about the closest available parking
- and the corresponding availability;
-\end_layout
-
-\begin_layout Itemize
-
 \end_layout
 
 \begin_layout Subsection
