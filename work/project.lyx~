@@ -144,7 +144,7 @@ Purpose
 This document represent the Requirement Analysis and Specification Document
  (RASD).
  The main goal of this document is to completely describe the system in
- terms of functional and non-functional requirements, analyse the real need
+ terms of functional and non-functional requirements, analyze the real need
  of the customer to model the system, show the constraints and the limits
  of the software and simulate the typical use cases that will occur after
  the development.
@@ -177,32 +177,33 @@ If the level of CO2 is too high or in case of any special situation managed
 \begin_layout Enumerate
 When a citizen signals through the app that he/she has to go to an emergency
  room, provide suggestions on which hospital to choose based on: i) the
- problem of the citizen and the specializations available in the hospitals,
+ condition of the citizen and the specializations available in the hospitals,
  ii) the status of queues in the various emergency rooms, iii) the location
  of the citizen and iv) the situation of traffic.
 \end_layout
 
 \begin_layout Enumerate
-When a citizen want to go to the city center by car, he can signals through
- the app the addres of the place he want to go, and the system will return
+When a citizen wants to go to the city center by car, he can signal through
+ the app the address of the place he wants to go, and the system will return
  the address of the closest available parking with corresponding availability.
 \end_layout
 
 \begin_layout Enumerate
-When a citizen want to reach a place in Milan using the public transports,
- he can signal through the app the starting and the arrival addresses and
- the kind of public transport he want to use (underground, tram or bus).
- After the citizen will have put this data into the app, the system will
- show: i) the position of the closest station where to get the selected
- public tansport, ii) the hour when the public transport will arrive at
- the starting station, iii) the estimated time it will take to arrive to
- destination.
+When a citizen wants to reach a place in Milan using the public transport
+ system, he can signal through the app the starting and the arrival address
+ and the kind of public transport he wants to use (underground, tram or
+ bus).
+ After the citizen has put this data into the app, the system will show:
+ i) name and position of the closest station where to get the desired public
+ transport, ii) name and position of the arrival station, iii) the time
+ when the public transport will arrive at the starting station, iv) the
+ estimated time it will take to arrive to destination.
 \end_layout
 
 \begin_layout Standard
 To provide this features, SmartCityAdvisor will use informations that the
  city of Milan receives from the Data Control Center of the city, that collects
- data from some sensors that have been installed in the territory.
+ data from various sensors that have been installed in the territory.
  This sensors acquire data about:
 \end_layout
 
@@ -211,11 +212,11 @@ level of CO2 in the air;
 \end_layout
 
 \begin_layout Itemize
-cars that enter in the city center;
+number of cars that enter in the city center;
 \end_layout
 
 \begin_layout Itemize
-availability of parking places in all areas in the city center.
+availability of parking places in all areas of the city center.
 \end_layout
 
 \begin_layout Standard
@@ -272,7 +273,7 @@ Center
 \begin_inset space ~
 \end_inset
 
-(DCC): an hardware/software system that collect some data usefull for the
+(DCC): an hardware/software system that collects some data useful for the
  city.
  This will be the actor that provides the data to our system, as indicated
  at the previous point of this document.
@@ -293,8 +294,8 @@ Center
 
 (TCC): an hardware/software system that, through proper actuators, controls
  the traffic light at the main intersection in the city and the displays
- that shows information about the situatuion of the traffic in the center.
- It can be made by a manually operated control center or an automatic system.
+ that shows information about the situation of the traffic in the center.
+ It can be operated manually or by an automatic system.
 \end_layout
 
 \begin_layout Description
@@ -328,8 +329,8 @@ List of the goals of SmartCityAdvisor:
 \end_layout
 
 \begin_layout Itemize
-[G3] If the level of CO2 in the air is over a specif threshold, access to
- the center should not be allowed to cars;
+[G3] If the level of CO2 in the air is over a specific threshold, access
+ to the center should not be allowed to cars;
 \end_layout
 
 \begin_layout Itemize
@@ -345,29 +346,49 @@ List of the goals of SmartCityAdvisor:
 \end_layout
 
 \begin_layout Itemize
-[G6] A registered citizen with a specific healt problem, should receive
- suggestions on which hospital to go to receive assistance for his problem
- in the shorters possible time (considering the time to go to the ospital
+[G6] A registered citizen with a specific health condition, should receive
+ suggestions on which hospital to go to receive assistance for his condition
+ in the shortest possible time (considering the time to go to the hospital
  and the time to wait in queue;
 \end_layout
 
 \begin_layout Itemize
 [G7] A registered citizen that want to go to a specific address in the center
- by car, should receive information about the closest available parking
- and the corresponding availability;
+ by car, should receive information about the closest to this address (as
+ the crow flies) available parking and the corresponding availability;
 \end_layout
 
 \begin_layout Itemize
 [G8] A registered citizen that want to go to a specific address in Milan,
  using a specific public transport (underground, tram or bus), should receive
- information about the position of the closest station where to get the
- selected public tansport, the hour when the public transport will arrive
- at the starting station, the estimated time it will take to arrive to destinati
-on.
+ information about the closest (as the crow flies) station where to get
+ the selected public transport, the arrival station, the time when the public
+ transport will arrive at the starting station, and the estimated time it
+ will take to arrive to destination.
 \end_layout
 
 \begin_layout Subsection
 Definitions
+\end_layout
+
+\begin_layout Description
+RASD:
+\end_layout
+
+\begin_layout Description
+DCC:
+\end_layout
+
+\begin_layout Description
+TCC:
+\end_layout
+
+\begin_layout Description
+System:
+\end_layout
+
+\begin_layout Description
+City:
 \end_layout
 
 \begin_layout Subsection
@@ -397,7 +418,7 @@ the public transport company (ATM);
 \end_layout
 
 \begin_layout Itemize
-the main ospitals of Milan.
+the main hospitals of Milan.
 \end_layout
 
 \begin_layout Subsection
@@ -442,6 +463,180 @@ Section 3: Specific Requirements, this part list requirements, typical scenarios
 
 \begin_layout Section
 Overall Description
+\end_layout
+
+\begin_layout Subsection
+Product perspective
+\end_layout
+
+\begin_layout Standard
+SmartCityAdvisor will be interfaced with Data Control Center's and Traffic
+ Control Center's system.
+\end_layout
+
+\begin_layout Standard
+Moreover our system will be interfaced with his users through a web and
+ a mobile application.
+\end_layout
+
+\begin_layout Subsection
+User characteristics
+\end_layout
+
+\begin_layout Standard
+The user that we expect to use our applications is a person who want an
+ easy way to access to the service we offer.
+ The only ability that they need are to be able to use a web browser and
+ to download a mobile application.
+\end_layout
+
+\begin_layout Subsection
+Constraints
+\end_layout
+
+\begin_layout Subsubsection
+Regulatory policies
+\end_layout
+
+\begin_layout Standard
+SmartCityAdvisor has to comply with all the applicable privacy laws to store
+ the sensible user data.
+\end_layout
+
+\begin_layout Subsubsection
+Hardware limitation
+\end_layout
+
+\begin_layout Standard
+The only hardware requirements that our product needs to be used by a user
+ are a device with a web browser, to access the web application, or smartphone
+ running iOS/Android/WinPhone to access the mobile app.
+\end_layout
+
+\begin_layout Subsubsection
+Documents related
+\end_layout
+
+\begin_layout Itemize
+Requirements and Analysis Specification Document (RASD).
+ 
+\end_layout
+
+\begin_layout Itemize
+Design Document (DD).
+ 
+\end_layout
+
+\begin_layout Itemize
+User’s Manual.
+\end_layout
+
+\begin_layout Itemize
+Testing report.
+\end_layout
+
+\begin_layout Subsection
+Assumptions
+\end_layout
+
+\begin_layout Standard
+We assume that:
+\end_layout
+
+\begin_layout Itemize
+It's defined, by a specific organization, a threshold of the level of CO2
+ admitted in the city of Milan.
+\end_layout
+
+\begin_layout Itemize
+(When the DCC reveals that the level of CO2 in the air of Milan is over
+ the indicated threshold, it will advise our system through a specific signal.)
+\end_layout
+
+\begin_layout Itemize
+If a special event occurs in the center of Milan (e.g., the arrival of some
+ VIP, an accident, …), it will be notified at the government of the city.
+\end_layout
+
+\begin_layout Itemize
+TCC is able to limit the traffic that enters in the city center by diverting
+ it through paths that avoid the center.
+ This is done by controlling the traffic lights using proper actuators.
+\end_layout
+
+\begin_layout Itemize
+TCC is able to write message that will be shown on the display at the main
+ entrances of the city.
+\end_layout
+
+\begin_layout Itemize
+When the TCC limits the traffic that enters in the city center, it will
+ also write a message on the displays to inform the citizens of this.
+\end_layout
+
+\begin_layout Itemize
+Our system knows a list of possible generic healt problems.
+\end_layout
+
+\begin_layout Itemize
+Our system knows, for each hospital that has established agreements with
+ the city of Milan, the specializations available in the hospital, selected
+ from the list of possible healt problems.
+\end_layout
+
+\begin_layout Itemize
+The healt problem of a user who is using our system, is always one which
+ is included in the list of possible healt problems.
+\end_layout
+
+\begin_layout Itemize
+All devices (PC and mobile) are provided with a GPS
+\end_layout
+
+\begin_layout Itemize
+The coordinates of the current position of each user are known through GPS.
+\end_layout
+
+\begin_layout Itemize
+TCC is able, given a specific address in Milan, to calculate the coordinate
+ of this address.
+\end_layout
+
+\begin_layout Itemize
+TCC is able, given the coordinates of two points in Milan, to calculate
+ an estimated time to go from the first to the second point by car, considering
+ the situation of the traffic at the moment.
+\end_layout
+
+\begin_layout Itemize
+DCC knows in real-time the length of the queues in the emergency rooms,
+ with an associated estimate time to wait, of all the hospitals that has
+ established agreements with the city of Milan.
+\end_layout
+
+\begin_layout Itemize
+Our system knows the coordinates of all the parking areas in the center
+ of Milan.
+\end_layout
+
+\begin_layout Itemize
+DCC knows in real-time the availability of all the parking areas in the
+ city center.
+\end_layout
+
+\begin_layout Itemize
+There are only three kind of public transports in Milan: underground, tram
+ and bus.
+\end_layout
+
+\begin_layout Itemize
+Our system knows the coordinates and the address of all the station of Milan's
+ public transports.
+\end_layout
+
+\begin_layout Itemize
+DCC knows in real-time the position and current schedule of all public transport
+s in the city.
 \end_layout
 
 \end_body

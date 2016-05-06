@@ -183,20 +183,22 @@ When a citizen signals through the app that he/she has to go to an emergency
 \end_layout
 
 \begin_layout Enumerate
-When a citizen wants to go to the city center by car, he can signal through
- the app the address of the place he wants to go, and the system will return
- the address of the closest available parking with corresponding availability.
+When a citizen wants to go to the city center by car, he/she can signal
+ through the app the address of the place he/she wants to go, and the system
+ will return the address of the closest available parking with corresponding
+ availability.
 \end_layout
 
 \begin_layout Enumerate
 When a citizen wants to reach a place in Milan using the public transport
- system, he can signal through the app the starting and the arrival address
- and the kind of public transport he wants to use (underground, tram or
- bus).
+ system, he/she can signal through the app the starting and the arrival
+ address and the kind of public transport he/she wants to use (underground,
+ tram or bus).
  After the citizen has put this data into the app, the system will show:
- i) the position of the closest station where to get the desired public
- transport, ii) the time when the public transport will arrive at the starting
- station, iii) the estimated time it will take to arrive to destination.
+ i) name and position of the closest station where to get the desired public
+ transport, ii) name and position of the arrival station, iii) the time
+ when the public transport will arrive at the starting station, iv) the
+ estimated time it will take to arrive to destination.
 \end_layout
 
 \begin_layout Standard
@@ -329,45 +331,67 @@ List of the goals of SmartCityAdvisor:
 
 \begin_layout Itemize
 [G3] If the level of CO2 in the air is over a specific threshold, access
- to the center should not be allowed to cars;
+ to the center should not be allowed to cars and the citizens should be
+ alerted of this (by app and by displays installed at the main entrances
+ of the city);
 \end_layout
 
 \begin_layout Itemize
 [G4] In case of any special situation in the center (e.g., the arrival of
  some VIP, an accident, …), and if the government of Milan think it is necessary
-, access to the center should not be allowed to cars;
-\end_layout
-
-\begin_layout Itemize
-[G5] If the access to the center is not allowed to cars, the citizen should
- be alerted of this (by app and by displays installed at he main entrances
+, access to the center should not be allowed to cars and the citizens should
+ be alerted of this (by app and by displays installed at the main entrances
  of the city);
 \end_layout
 
 \begin_layout Itemize
-[G6] A registered citizen with a specific health condition, should receive
+[G5] A registered citizen with a specific health problem, should receive
  suggestions on which hospital to go to receive assistance for his condition
  in the shortest possible time (considering the time to go to the hospital
- and the time to wait in queue;
+ and the time to wait in queue);
 \end_layout
 
 \begin_layout Itemize
-[G7] A registered citizen that want to go to a specific address in the center
- by car, should receive information about the closest available parking
- and the corresponding availability;
+[G6] A registered citizen that want to go to a specific address in the center
+ by car, should receive information about the closest to this address (as
+ the crow flies) available parking and the corresponding availability;
 \end_layout
 
 \begin_layout Itemize
-[G8] A registered citizen that want to go to a specific address in Milan,
+[G7] A registered citizen that want to go to a specific address in Milan,
  using a specific public transport (underground, tram or bus), should receive
- information about the position of the closest station where to get the
- selected public transport, the time when the public transport will arrive
- at the starting station, and the estimated time it will take to arrive
- to destination.
+ information about the closest (as the crow flies) station where to get
+ the selected public transport, the arrival station, the time when the public
+ transport will arrive at the starting station, and the estimated time it
+ will take to arrive to destination.
 \end_layout
 
 \begin_layout Subsection
 Definitions
+\end_layout
+
+\begin_layout Description
+RASD:
+\end_layout
+
+\begin_layout Description
+DCC:
+\end_layout
+
+\begin_layout Description
+TCC:
+\end_layout
+
+\begin_layout Description
+System:
+\end_layout
+
+\begin_layout Description
+City:
+\end_layout
+
+\begin_layout Description
+User:
 \end_layout
 
 \begin_layout Subsection
@@ -442,6 +466,411 @@ Section 3: Specific Requirements, this part list requirements, typical scenarios
 
 \begin_layout Section
 Overall Description
+\end_layout
+
+\begin_layout Subsection
+Product perspective
+\end_layout
+
+\begin_layout Standard
+SmartCityAdvisor will be interfaced with Data Control Center's and Traffic
+ Control Center's system.
+\end_layout
+
+\begin_layout Standard
+Moreover our system will be interfaced with his users through a web and
+ a mobile application.
+\end_layout
+
+\begin_layout Subsection
+User characteristics
+\end_layout
+
+\begin_layout Standard
+The user that we expect to use our applications is a person who want an
+ easy way to access to the service we offer.
+ The only ability that they need are to be able to use a web browser and
+ to download a mobile application.
+\end_layout
+
+\begin_layout Subsection
+Constraints
+\end_layout
+
+\begin_layout Subsubsection
+Regulatory policies
+\end_layout
+
+\begin_layout Standard
+SmartCityAdvisor has to comply with all the applicable privacy laws to store
+ the sensible user data.
+\end_layout
+
+\begin_layout Subsubsection
+Hardware limitation
+\end_layout
+
+\begin_layout Standard
+The only hardware requirements that our product needs to be used by a user
+ are a device with a web browser, to access the web application, or smartphone
+ running iOS/Android/WinPhone to access the mobile app.
+\end_layout
+
+\begin_layout Subsubsection
+Documents related
+\end_layout
+
+\begin_layout Itemize
+Requirements and Analysis Specification Document (RASD).
+ 
+\end_layout
+
+\begin_layout Itemize
+Design Document (DD).
+ 
+\end_layout
+
+\begin_layout Itemize
+User’s Manual.
+\end_layout
+
+\begin_layout Itemize
+Testing report.
+\end_layout
+
+\begin_layout Subsection
+Assumptions
+\end_layout
+
+\begin_layout Standard
+We assume that:
+\end_layout
+
+\begin_layout Itemize
+All citizens own a valid email address.
+\end_layout
+
+\begin_layout Itemize
+Two different citizens can't have the same email address.
+\end_layout
+
+\begin_layout Itemize
+It's defined, by a specific organization, a threshold of the level of CO2
+ admitted in the city of Milan.
+\end_layout
+
+\begin_layout Itemize
+If a special event occurs in the center of Milan (e.g., the arrival of some
+ VIP, an accident, …), it will be notified at the government of the city.
+\end_layout
+
+\begin_layout Itemize
+TCC is able to limit the traffic that enters in the city center by diverting
+ it through paths that avoid the center.
+ This is done by controlling the traffic lights using proper actuators.
+\end_layout
+
+\begin_layout Itemize
+When TCC receives a request to limit the traffic in the city center by our
+ system, it will limit the traffic within 5 minutes.
+\end_layout
+
+\begin_layout Itemize
+TCC is able to write message that will be shown on the display at the main
+ entrances of the city.
+\end_layout
+
+\begin_layout Itemize
+When the TCC limits the traffic that enters in the city center, it will
+ also write a message on the displays to inform the citizens of this.
+\end_layout
+
+\begin_layout Itemize
+Our system knows a list of possible generic healt problems.
+\end_layout
+
+\begin_layout Itemize
+Our system knows, for each hospital that has established agreements with
+ the city of Milan, the specializations available in the hospital, selected
+ from the list of possible healt problems, and the coordinates of its location.
+\end_layout
+
+\begin_layout Itemize
+The healt problem of a user who is using our system, is always one which
+ is included in the list of possible healt problems.
+\end_layout
+
+\begin_layout Itemize
+All devices (PC and mobile) are provided with a GPS.
+\end_layout
+
+\begin_layout Itemize
+Our system is able, given the coordinates of two points, to calculate the
+ distance between this points (as the crow flies).
+\end_layout
+
+\begin_layout Itemize
+The coordinates of the current position of each user are known through GPS.
+\end_layout
+
+\begin_layout Itemize
+TCC is able, given a specific address in Milan, to calculate the coordinate
+ of this address.
+\end_layout
+
+\begin_layout Itemize
+TCC is able, given the coordinates of two points in Milan, to calculate
+ an estimated time to go from the first to the second point by car, considering
+ the situation of the traffic at the moment.
+\end_layout
+
+\begin_layout Itemize
+DCC knows in real-time the length of the queues in the emergency rooms,
+ with an associated estimated time to wait, of all the hospitals that has
+ established agreements with the city of Milan.
+\end_layout
+
+\begin_layout Itemize
+Our system knows all the parking areas in the center of Milan with their
+ coordinates.
+\end_layout
+
+\begin_layout Itemize
+DCC knows in real-time the availability of all the parking areas in the
+ city center.
+\end_layout
+
+\begin_layout Itemize
+There are only three kind of public transports in Milan: underground, tram
+ and bus.
+\end_layout
+
+\begin_layout Itemize
+Our system knows the coordinates and the address of all the station of Milan's
+ public transports.
+\end_layout
+
+\begin_layout Itemize
+DCC knows in real-time the position and current schedule of all public transport
+s in the city.
+\end_layout
+
+\begin_layout Section
+Specific Requirements
+\end_layout
+
+\begin_layout Subsection
+User intarfaces
+\end_layout
+
+\begin_layout Subsection
+Functional requirements
+\end_layout
+
+\begin_layout Standard
+Here the functional requirements identified for each goal:
+\end_layout
+
+\begin_layout Itemize
+[G1] Citizen should be able to register to the service:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The system must allow all citizen to compile the registration form, entering
+ name, surname, email and password.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+[G2] Citizen should be able to login to the service:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The system has to provide a login function, with the possibility of recovering
+ a forgotten password.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+[G3] If the level of CO2 in the air is over a specic threshold, access to
+ the center should not be allowed to cars, and the citizens should be alerted
+ of this (by app and by displays installed at the main entrances of the
+ city);
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+When DCC reveals that the level of CO2 in the air of Milan is over the indicated
+ threshold, it will advise our system through a specific signal.
+\end_layout
+
+\begin_layout Itemize
+When the system receives the signal from DCC, it must advise TCC to limit
+ the traffic in the city center.
+\end_layout
+
+\begin_layout Itemize
+TCC must confirm to the system that the traffic in the center is going to
+ be limited.
+\end_layout
+
+\begin_layout Itemize
+After TCC has confirmed to the system that the traffic in the center is
+ going to be limited, the system must advice all the registered citizens
+ of that, through an app notification.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+[G4] In case of any special situation in the center (e.g., the arrival of
+ some VIP, an accident, …), and if the government of Milan think it is necessary
+, access to the center should not be allowed to cars and the citizens should
+ be alerted of this (by app and by displays installed at the main entrances
+ of the city):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+When the goverment of Milan knows that a special situation is going to occour
+ in the center, it will advise our system of that.
+\end_layout
+
+\begin_layout Itemize
+After the system has received the information from the government, it must
+ advise TCC to limit the traffic in the city center.
+\end_layout
+
+\begin_layout Itemize
+TCC must confirm to the system that the traffic in the center is going to
+ be limited.
+\end_layout
+
+\begin_layout Itemize
+After TCC has confirmed to the system that the traffic in the center is
+ going to be limited, the system must advice all the registered citizens
+ of that, through an app notification.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+[G5] A registered citizen with a specic health problem, should receive suggestio
+ns on which hospital to go to receive assistance for his condition in the
+ shortest possible time (considering the time to go to the hospital and
+ the time to wait in queue):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The system must allow a registered citizen to indicate his specific healt
+ problem and his address.
+\end_layout
+
+\begin_layout Itemize
+The system must allow the user to indicate his posistion also using GPS.
+\end_layout
+
+\begin_layout Itemize
+The system must provide to TCC the coordinates of each hospital that is
+ specialized for the indicated healt problem, and the coordinates or the
+ address where the user is.
+ TCC must return to the system an estimated arrival time for each hospital
+ that has been comunicated.
+\end_layout
+
+\begin_layout Itemize
+The system must provide to DCC the list of the hospitals that are specialized
+ for the indicated healt problem.
+ DCC must return to the system an estimated time to wait in the queue for
+ each hospital that has been comunicated.
+\end_layout
+
+\begin_layout Itemize
+After the sysyem has found the hospitals that can assist the user in the
+ shortest possible time (considering the time to go to the hospital and
+ the time to wait in queue), among those that are specialized for the indicated
+ healt problem, it must provide to the user information about this hospital.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+[G6] A registered citizen that want to go to a specific address in the center
+ by car, should receive information about the available parking closest
+ to the given address (as the crow flies) and the corresponding availability:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The system must allow a registered citizen to provide an address in the
+ city center where he/she want to go.
+\end_layout
+
+\begin_layout Itemize
+The system must allow the user to indicate the address also using GPS.
+\end_layout
+
+\begin_layout Itemize
+If the user inserts a textual address, the system must comunicate this address
+ to TCC.
+ TCC must return to the system the coordinates associated to the address.
+\end_layout
+
+\begin_layout Itemize
+The system must comunicate to DCC that in needs information about the availabili
+ty of all the parking areas in the center, and DCC must provide this information.
+\end_layout
+
+\begin_layout Itemize
+The system must provide to the user information about the available parking
+ area closest to the given address and the corresponding availability.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+[G7] A registered citizen that want to go to a specific address in Milan,
+ using a specific public transport (underground, tram or bus), should receive
+ information about the closest (as the crow flies) station where to get
+ the selected public transport, the arrival station, the time when the public
+ transport will arrive at the starting station, and the estimated time it
+ will take to arrive to destination:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The system must allow a registered citizen to indicate the starting and
+ the arrival address of the trip, and the puclic transport he/she want to
+ use.
+\end_layout
+
+\begin_layout Itemize
+The system must allow the user to indicate the addresses also using GPS.
+\end_layout
+
+\begin_layout Itemize
+If the user inserts one or two textual addresses, the system must comunicate
+ this addresses to TCC.
+ TCC must return to the system the coordinates associated to them.
+\end_layout
+
+\begin_layout Itemize
+The system must provide to DCC the two stations, of the selected public
+ transport, closest to the starting and to the arrival addresses.
+ DCC must return to the system the schedule of the first train/tram/bus
+ that will pass throug the starting station and that is directed toward
+ the arrival station.
+\end_layout
+
+\begin_layout Itemize
+The system must provide to the user information about the closest (as the
+ crow flies) station where to get the selected public transport, the arrival
+ station, the time when the public transport will arrive at the starting
+ station, and the estimated time it will take to arrive to destination.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
 \end_layout
 
 \end_body
