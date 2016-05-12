@@ -1836,7 +1836,7 @@ room
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="20" columns="2">
+<lyxtabular version="3" rows="21" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="left" valignment="top">
@@ -2019,7 +2019,7 @@ position;
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" leftline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2033,7 +2033,28 @@ position;
 
 \begin_layout Plain Layout
 2.
- The system provides to TCC the coordinates of each hospital that is specialized
+ The registerd citizen selects an health problem;
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ The system provides to TCC the coordinates of each hospital that is 
 \end_layout
 
 \end_inset
@@ -2068,7 +2089,7 @@ position;
 \begin_inset space ~
 \end_inset
 
- for the indicated health problem;
+ specialized for the indicated health problem;
 \end_layout
 
 \end_inset
@@ -2088,7 +2109,7 @@ position;
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.
+4.
  the system provides to TCC the coordinates or the address where the user
  is;
 \end_layout
@@ -2110,7 +2131,7 @@ position;
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.
+5.
  TCC returns to the system an ETA for each hospital that has been 
 \end_layout
 
@@ -2166,64 +2187,64 @@ communicated;
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.
- The system provides to DCC the list of the hospitals that are specialized
- for the 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-indicated health problem;
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 6.
+ The system provides to DCC the list of the hospitals that are specialized
+ for 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+the indicated health problem;
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.
  DCC returns to the system an estimated time to wait in the queue for each
  
 \end_layout
