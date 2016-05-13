@@ -374,27 +374,28 @@ Definitions
 \end_layout
 
 \begin_layout Description
-RASD:
+RASD: Requirement Analysis and Specification Document (this document).
+ 
 \end_layout
 
 \begin_layout Description
-DCC:
+DCC: Data Control Center.
 \end_layout
 
 \begin_layout Description
-TCC:
+TCC: Traffic Control Center.
 \end_layout
 
 \begin_layout Description
-System:
+System: The system that we have to implement (SmartCityAdvisor).
 \end_layout
 
 \begin_layout Description
-City:
+City: The city of Milan.
 \end_layout
 
 \begin_layout Description
-User:
+User: A citizen that uses our system.
 \end_layout
 
 \begin_layout Subsection
@@ -656,6 +657,10 @@ Our system knows the coordinates and the address of all the station of Milan's
 \begin_layout Itemize
 DCC knows in real-time the position and current schedule of all public transport
 s in the city.
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -664,6 +669,404 @@ Specific Requirements
 
 \begin_layout Subsection
 User intarfaces
+\end_layout
+
+\begin_layout Standard
+Here are presented some mockup that represent an idea of the structure of
+ the application pages.
+\end_layout
+
+\begin_layout Subsubsection
+Login
+\end_layout
+
+\begin_layout Standard
+​ The mockup shows the first screen of SmartCityAdvisor.
+ Here users can log in to the service and guests can access the registration
+ form.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/Mirko/Dropbox/shared_se2/mockups/login.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Registration
+\end_layout
+
+\begin_layout Standard
+The mockup shows the registration screen of SmartCityAdvisor.
+ Here users can register to the service with their personal data.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/Mirko/Dropbox/shared_se2/mockups/registration.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Homepage
+\end_layout
+
+\begin_layout Standard
+The mockup shows the main page of the application.
+ Here a user can choose one of the three features provided by the app.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename mockups/homepage.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Find emergency room
+\end_layout
+
+\begin_layout Standard
+These are the mockups related to the 
+\begin_inset Quotes eld
+\end_inset
+
+find emergency room
+\begin_inset Quotes erd
+\end_inset
+
+ service.
+ The first is the screen where a user can select his healt problem and his
+ position, and asks to the system which are the best hospital to go.
+ In the second screen the system shows the information about the best hospital
+ found.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename mockups/emergengy room.png
+	scale 70
+
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename mockups/emergengy room confirm.png
+	scale 70
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Find Parking
+\end_layout
+
+\begin_layout Standard
+These are the mockups related to the 
+\begin_inset Quotes eld
+\end_inset
+
+find parking
+\begin_inset Quotes erd
+\end_inset
+
+ service.
+ The first is the screen where a user can select the position in the city
+ center he/she wants to go, and asks to the system which are the closest
+ available parking.
+ In the second screen the system shows the information about the found parking.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename mockups/parking.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename mockups/parking confirm.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Find public transport
+\end_layout
+
+\begin_layout Standard
+These are the mockups related to the 
+\begin_inset Quotes eld
+\end_inset
+
+find public transport
+\begin_inset Quotes erd
+\end_inset
+
+ service.
+ The first is the screen where a user can select the starting and the arrival
+ positions, the public transport he/she want to use.
+ In the second screen the system shows the information about the the first
+ train/tram/bus that will arrive in the selected starting station.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename mockups/Public Transport.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename mockups/Public Transport confirm.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Traffic limitation notification
+\end_layout
+
+\begin_layout Standard
+This mockup shows the screen that is displayed when the system notifies
+ to all the registered citizens that the traffic in the city center is closed.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename mockups/notifications.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -681,7 +1084,7 @@ Here the functional requirements identified for each goal:
 \begin_deeper
 \begin_layout Itemize
 The system must allow all citizen to compile the registration form, entering
- name, surname, email and password.
+ name, surname, address, CF, email and password.
 \end_layout
 
 \end_deeper
@@ -874,12 +1277,23 @@ The system must provide to the user information about the closest (as the
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 UML Models
 \end_layout
 
 \begin_layout Subsubsection
 Use cases
+\end_layout
+
+\begin_layout Standard
+Here are shown the system's use cases with the relative sequence diagrams.
 \end_layout
 
 \begin_layout Description
@@ -892,7 +1306,7 @@ registration
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="15" columns="2">
+<lyxtabular version="3" rows="14" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="left" valignment="top">
@@ -1013,43 +1427,8 @@ Flow of events
 
 \begin_layout Plain Layout
 3.
- the citizen inserts into the registration form his name, surname, email
- address 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-and a password;
+ the citizen inserts into the registration the request data and a password;
+ 
 \end_layout
 
 \end_inset
@@ -1219,6 +1598,40 @@ to point 2 of EventFlow.
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sequence diagram/User registration.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+User registration sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1555,6 +1968,50 @@ passenger and doesn’t allow the login.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sequence diagram/User login.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+User login sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 Traffic
 \begin_inset space ~
@@ -1816,6 +2273,50 @@ Exceptions
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sequence diagram/Traffic limitation.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Traffic limitation sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -2355,6 +2856,58 @@ notifies that to the system and it goes back to point 1 of EventFlow.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sequence diagram/Find emergency room.png
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Find emergency room sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 Find
 \begin_inset space ~
@@ -2369,7 +2922,7 @@ area
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="21" columns="2">
+<lyxtabular version="3" rows="19" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="left" valignment="top">
@@ -2387,7 +2940,7 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-Find parking room
+Find parking area
 \end_layout
 
 \end_inset
@@ -2679,62 +3232,6 @@ associated to the indicated address;
 
 \begin_layout Plain Layout
 4.
- TCC returns to the system an ETA for each hospital that has been 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-communicated;
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5.
  The system communicates to DCC that it needs information about the 
 \end_layout
 
@@ -2790,7 +3287,7 @@ availability of all the parking areas in the center;
 \begin_inset Text
 
 \begin_layout Plain Layout
-6.
+5.
  DCC provides to the system the required information;
 \end_layout
 
@@ -2881,6 +3378,47 @@ TCC notifies that to the system and it goes back to point 1 of EventFlow.
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sequence diagram/Find parking area.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Find parking area sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3584,6 +4122,43 @@ case TCC notifies that to the system and it goes back to point 1 of EventFlow.
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sequence diagram/Find public transport.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Find public transport sequence diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
