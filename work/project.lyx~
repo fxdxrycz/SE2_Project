@@ -127,6 +127,38 @@ status open
 
 
 \backslash
+pagenumbering{roman}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 pagenumbering{arabic}
 \end_layout
 
@@ -281,6 +313,11 @@ Center
  city.
  This will be the actor that provides the data to our system, as indicated
  at the previous point of this document.
+ The communications among DCC and our system occur automatically, without
+ human participation, using a client application installed on the system
+ of DCC.
+ This application has access in real time to the data mentioned in the previous
+ section.
 \end_layout
 
 \begin_layout Description
@@ -300,6 +337,12 @@ Center
  the traffic light at the main intersection in the city and the displays
  that shows information about the situation of the traffic in the center.
  It can be operated manually or by an automatic system.
+ The communications among TCC and our system occur automatically, without
+ human participation, using a client application installed on the system
+ of TCC.
+ This application allows our system to require to TCC some information that
+ its system can obtain, e.g.
+ the time to get from one point to another in Milan.
 \end_layout
 
 \begin_layout Description
@@ -312,8 +355,9 @@ of
 \end_inset
 
 Milan: in case of any special situation in the center (e.g., the arrival of
- some VIP, an accident, …), it will indicate to the system that the access
- to the city center must be limited.
+ some VIP, an accident, …), an employee of the government will indicate
+ to the system that the access to the city center must be limited, using
+ a web application accessible from any browser.
 \end_layout
 
 \begin_layout Subsection
@@ -468,6 +512,13 @@ Section 3: Specific Requirements, this part list requirements, typical scenarios
  section is filled with UML diagrams.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Overall Description
 \end_layout
@@ -518,6 +569,12 @@ Hardware limitation
 The only hardware requirements that our product needs to be used by a user
  are a device with a web browser, to access the web application, or smartphone
  running iOS/Android/WinPhone to access the mobile app.
+\end_layout
+
+\begin_layout Standard
+The application installed on TCC and DCC system will be created ad hoc,
+ so the hardware limitations are those that are imposed by the specific
+ component.
 \end_layout
 
 \begin_layout Subsubsection
@@ -600,8 +657,16 @@ Our system knows, for each hospital that has established agreements with
 \end_layout
 
 \begin_layout Itemize
+There is at least one hospital for each possible health problem in the list.
+\end_layout
+
+\begin_layout Itemize
 The health problem of a user who is using our system, is always one which
  is included in the list of possible health problems.
+\end_layout
+
+\begin_layout Itemize
+Each hospital has an unique queue for every possible problem.
 \end_layout
 
 \begin_layout Itemize
@@ -668,12 +733,17 @@ Specific Requirements
 \end_layout
 
 \begin_layout Subsection
-User intarfaces
+User interfaces
 \end_layout
 
 \begin_layout Standard
-Here are presented some mockup that represent an idea of the structure of
- the application pages.
+Here are presented some mock-up that represent an idea of the structure
+ of the mobile application screen.
+\end_layout
+
+\begin_layout Standard
+The screen that will be shown when a user use a web browser are similar
+ to those for the mobile application.
 \end_layout
 
 \begin_layout Subsubsection
@@ -681,7 +751,7 @@ Login
 \end_layout
 
 \begin_layout Standard
-​ The mockup shows the first screen of SmartCityAdvisor.
+​ The mock-up shows the first screen of SmartCityAdvisor.
  Here users can log in to the service and guests can access the registration
  form.
 \begin_inset Newline newline
@@ -724,7 +794,7 @@ Registration
 \end_layout
 
 \begin_layout Standard
-The mockup shows the registration screen of SmartCityAdvisor.
+The mock-up shows the registration screen of SmartCityAdvisor.
  Here users can register to the service with their personal data.
 \begin_inset Newline newline
 \end_inset
@@ -765,7 +835,7 @@ Homepage
 \end_layout
 
 \begin_layout Standard
-The mockup shows the main page of the application.
+The mock-up shows the main page of the application.
  Here a user can choose one of the three features provided by the app.
 \begin_inset Newline newline
 \end_inset
@@ -807,7 +877,7 @@ Find emergency room
 \end_layout
 
 \begin_layout Standard
-These are the mockups related to the 
+These are the mock-ups related to the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -816,8 +886,8 @@ find emergency room
 \end_inset
 
  service.
- The first is the screen where a user can select his healt problem and his
- position, and asks to the system which are the best hospital to go.
+ The first is the screen where a user can select his health problem and
+ his position, and asks to the system which are the best hospital to go.
  In the second screen the system shows the information about the best hospital
  found.
 \begin_inset Newline newline
@@ -884,7 +954,7 @@ Find Parking
 \end_layout
 
 \begin_layout Standard
-These are the mockups related to the 
+These are the mock-ups related to the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -965,7 +1035,7 @@ Find public transport
 \end_layout
 
 \begin_layout Standard
-These are the mockups related to the 
+These are the mock-ups related to the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1042,7 +1112,7 @@ Traffic limitation notification
 \end_layout
 
 \begin_layout Standard
-This mockup shows the screen that is displayed when the system notifies
+This mock-up shows the screen that is displayed when the system notifies
  to all the registered citizens that the traffic in the city center is closed.
 \begin_inset Newline newline
 \end_inset
@@ -1277,6 +1347,124 @@ The system must provide to the user information about the closest (as the
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Scenarios
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 1
+\end_layout
+
+\begin_layout Standard
+Mario just saw an ad on the local newspaper about this new SmartCityApp,
+ he pulls out his phone and downloads it.
+ He then opens the app, compiles the registration form and the system provides
+ him with a confirmation.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 2
+\end_layout
+
+\begin_layout Standard
+Luigi just registered to our system, now he is trying to login to see what
+ he can actually do with the app.
+ So he enters the username and password to login.
+ The app forwards this info to our system that sends back a confirmation,
+ so the app display the home screen of SmartcityAdvisor.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 3
+\end_layout
+
+\begin_layout Standard
+Caterina is a tourist enjoying a vacation in Milan, she finds herself in
+ a medical emergency, she was walking around the city and accidentally fell
+ down braking her left arm… She immediately pulls off the phone and opens
+ the SmartCityAdvisor app.
+ She is already logged in, so she selects the “find emergency room” option.
+ In the next screen she selects her condition from the drop down menu, she
+ then confirms her position obtained through GPS and finally she taps on
+ “find the best hospital”.
+ The system sends to TCC the coordinates of all the hospitals that satisfies
+ the criteria and obtain an ETA for each hospital.
+ It also queries the DCC to obtain the queue time of the same hospitals.
+ After a short wait the system elaborates the data coming from the TCC/DCC
+ and provides the name and address of the hospital best suited for Caterina.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 4
+\end_layout
+
+\begin_layout Standard
+Claudio is a student at PoliMI, he just decided he wants to go shopping
+ for shoes in the city center, after a quick search on the internet he found
+ a couple of places that are selling some cool looking shoes.
+ Currently there is a strike of the public transport system so he decides
+ to use his personal car, he opens the SmartCityAdvisor app and selects
+ the “find parking” option.
+ He now enters the destination address and selects the “found nearest parking”
+ option, the system sends the address to the TCC and gets the coordinates
+ in return.
+ The system requires information about the availability of the parking areas
+ in the city center to the DCC and gets back the required data.
+ After a short wait the app displays the nearest parking and the number
+ of available spots.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 5
+\end_layout
+
+\begin_layout Standard
+Brenno is a sales clerk working in a big electronics chain, he commutes
+ everyday using the underground, last night he slept over at his new girlfriend
+ place, he just woke up and he wants to know how to reach his working place,
+ he opens the SmartCityAdvisor app and he selects the “find public transport”
+ option.
+ He inputs both the starting and arrival addresses, he then selects the
+ underground as the preferred option and taps on “take me there”.
+ The system queries the TCC to get the addresses respective coordinates.
+ Then the system calculates the two underground stations closest respectively
+ to the starting and to the arrival coordinates and sends those to the DCC,
+ including the preferred public transport.
+ The DCC returns the schedule of the next train.
+ The app provides Brenno with a map, displaying the closest underground
+ station, the time of the next train and the estimated time of arrival.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 6
+\end_layout
+
+\begin_layout Standard
+It hasn’t been raining for a while in Milan and the CO2 level has soared
+ over the safe threshold set by the city government.
+ The DCC has automatically sent this info to our system.
+ The system in accordance to the internal rules instructs the TCC to limit
+ the traffic.
+ The TCC than confirms the traffic limitation to our system, as soon as
+ this confirmation arrives, the system sends a notification to all the registere
+d users.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 7
+\end_layout
+
+\begin_layout Standard
+The first lady of the USA is visiting Milan, the city government has decided
+ to limit traffic in the city center so it instructs our system to do exactly
+ that.
+ Our system then proceeds to contact the TCC and get confirmation of the
+ successful limiting.
+ As soon as the confirmation is received by the system, a notification is
+ sent to all the registered users.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -1591,7 +1779,7 @@ All this exception are handled alerting the visitor of the problem and going
 \begin_inset Text
 
 \begin_layout Plain Layout
-to point 2 of EventFlow.
+to point 2 of Event Flow.
 \end_layout
 
 \end_inset
@@ -1609,7 +1797,7 @@ to point 2 of EventFlow.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1979,7 +2167,7 @@ passenger and doesn’t allow the login.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2140,8 +2328,8 @@ Entry condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-DCC or the government of Milan notifies the system that the level of CO2
- has
+DCC or the government of Milan notifies the system that the traffic in the
+ city 
 \end_layout
 
 \end_inset
@@ -2161,7 +2349,7 @@ DCC or the government of Milan notifies the system that the level of CO2
 \begin_inset Text
 
 \begin_layout Plain Layout
-exceeded the threshold.
+center must be limited.
 \end_layout
 
 \end_inset
@@ -2290,7 +2478,7 @@ Exceptions
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2534,7 +2722,7 @@ position;
 
 \begin_layout Plain Layout
 2.
- The registerd citizen selects an health problem;
+ The registered citizen selects an health problem;
 \end_layout
 
 \end_inset
@@ -2802,7 +2990,7 @@ Exit condition
 \begin_inset Text
 
 \begin_layout Plain Layout
-The system provides to the user informations about the best hospital found.
+The system provides to the user information about the best hospital found.
 \end_layout
 
 \end_inset
@@ -2843,7 +3031,7 @@ The inserted address is not valid or is not contained in the city.
 \begin_inset Text
 
 \begin_layout Plain Layout
-notifies that to the system and it goes back to point 1 of EventFlow.
+notifies that to the system and it goes back to point 1 of Event Flow.
 \end_layout
 
 \end_inset
@@ -2868,7 +3056,7 @@ notifies that to the system and it goes back to point 1 of EventFlow.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3370,7 +3558,7 @@ The inserted address is not valid or is not contained in the city center.
 \begin_inset Text
 
 \begin_layout Plain Layout
-TCC notifies that to the system and it goes back to point 1 of EventFlow.
+TCC notifies that to the system and it goes back to point 1 of Event Flow.
 \end_layout
 
 \end_inset
@@ -3388,7 +3576,7 @@ TCC notifies that to the system and it goes back to point 1 of EventFlow.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4115,7 +4303,8 @@ One of the inserted addresses is not valid or is not contained in the city
 \begin_inset Text
 
 \begin_layout Plain Layout
-case TCC notifies that to the system and it goes back to point 1 of EventFlow.
+case TCC notifies that to the system and it goes back to point 1 of Event
+ Flow.
 \end_layout
 
 \end_inset
@@ -4132,7 +4321,7 @@ case TCC notifies that to the system and it goes back to point 1 of EventFlow.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4163,6 +4352,550 @@ Find public transport sequence diagram
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mirko/Dropbox/shared_se2/sequence diagram/UseCase Diagram0.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+System use case diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Class diagram
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Mirko/Dropbox/shared_se2/sequence diagram/Class Diagram0.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Class diagram of SmartCityAdvisor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Non functional requirements
+\end_layout
+
+\begin_layout Subsubsection
+Performance Requirements 
+\end_layout
+
+\begin_layout Standard
+Performance must be acceptable to grantee a good grade of usability.
+ We assume the response time of the system is close to zero, so the performance
+ are essentially bounded by users internet connection.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Design Constraints 
+\end_layout
+
+\begin_layout Standard
+The application will be developed with Java EE so it will inherit all language’s
+ constraints.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Software System Attributes 
+\end_layout
+
+\begin_layout Description
+Availability: The application will be accessible online anytime.
+ To achieve this goal could be necessary to use a dedicated server.
+ 
+\end_layout
+
+\begin_layout Description
+Maintainability: The application does not provide any specific API, but
+ the whole application code will be documented to well inform future developers
+ of how application works and how it has been developed.
+ 
+\end_layout
+
+\begin_layout Description
+Portability: The application could be used on any SO which supports JVM.
+\end_layout
+
+\begin_layout Subsubsection
+Security
+\end_layout
+
+\begin_layout Description
+Web
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+mobile
+\begin_inset space ~
+\end_inset
+
+application: SmartCityAdvisor application implements a login authentication
+ to protect the information of users.
+ Password of user is saved using hashing mechanism but could not be enough.
+ This system do not actually require anything about the strongness of the
+ password so could be developed a system that require an 8 character password
+ with number, letter and special character.
+ Password also is static, user is not involved in password changing so,
+ system will ask to user to change frequently the password for example every
+ 6 month or less.
+ Another useful thing could be some advice to users about how to build a
+ safe password.
+ 
+\end_layout
+
+\begin_layout Description
+Government
+\begin_inset space ~
+\end_inset
+
+web
+\begin_inset space ~
+\end_inset
+
+app: Before our system is put into operation, access credentials will be
+ provided to the goverment of Milan.
+ When an employee of the government wants to communicate to the system that
+ the traffic in the center must be limited, he has to login using the given
+ credentials.
+ The system changes automatically this credential every 6 month or in case
+ of security violation, and it communicates the new credentials to the govermnen
+t per email.
+\end_layout
+
+\begin_layout Description
+TCC
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+DCC
+\begin_inset space ~
+\end_inset
+
+application: Before our system is put into operation, access credentials
+ will be provided to TCC and DCC.
+ Since these applications work automatically, the credential must be inserted
+ only when the app is restarted, or when they are changed for security reasons.
+ In this case, the new credential will be communicated to an employee of
+ TCC/DCC per email.
+ We assume that this employee will insert the new credential in the app
+ within 5 minutes since he has received the email.
+\end_layout
+
+\begin_layout Description
+Server
+\begin_inset space ~
+\end_inset
+
+Side: The server side architecture could be implemented dividing strongly
+ the data from application.
+ Application Server is separated from database and from the web server.
+ All zone are divided by firewall.
+ Access to this zone is restricted and forbidden to not authorized user.
+\end_layout
+
+\begin_layout Section
+Alloy
+\end_layout
+
+\begin_layout Subsection
+Modeling
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-26 15.16.20.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-26 15.16.47.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-26 15.16.56.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-26 15.17.15.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-26 15.17.27.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-26 15.17.49.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-26 15.17.57.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Analyzer
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screenshot/Immagine.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Screenshot/Immagine2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Worlds generated
+\end_layout
+
+\begin_layout Standard
+Here the worlds associated to the three kind of request that the system
+ can receive:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-24 16.38.08.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+World associated to the emergency room request
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-24 16.38.50.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+World associated to the parking request
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Screenshot/Screenshot 2016-05-24 17.14.10.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+World associated to the public transport request
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Appendix
+\end_layout
+
+\begin_layout Subsection
+Software and tools used
+\end_layout
+
+\begin_layout Itemize
+LyX: to redact and to format this document.
+ 
+\end_layout
+
+\begin_layout Itemize
+Astah Professional (http://astah.net/editions/professional): to create Use
+ Cases Diagrams, Sequence Diagrams, Class Diagrams and State Machine Diagrams
+ 
+\end_layout
+
+\begin_layout Itemize
+Alloy Analyzer(http://alloy.mit.edu/alloy/): to prove the consistency of our
+ model.
+ 
+\end_layout
+
+\begin_layout Itemize
+Balsamiq Mockups(http://balsamiq.com/products/mock-ups/): to create mock-ups.
+\end_layout
+
+\begin_layout Subsection
+Hours of work
+\end_layout
+
+\begin_layout Itemize
+Mirko Basilico: ~28 hours;
+\end_layout
+
+\begin_layout Itemize
+Federico Dazzan: ~28 hours.
 \end_layout
 
 \end_body
